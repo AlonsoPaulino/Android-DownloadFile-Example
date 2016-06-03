@@ -5,6 +5,6 @@ package com.luisalonso.androidfiledownload;
  */
 public class Constants {
 
-    //public static final String  FILE_FROM_DRIVE_NAME = "drivetesting.txt";
-    public static final String FILE_FROM_DRIVE_NAME = "test2.txt";
+    public static final String  FILE_FROM_DRIVE_NAME = "drivetesting.txt";
+    //public static final String FILE_FROM_DRIVE_NAME = "test2.txt";
 }

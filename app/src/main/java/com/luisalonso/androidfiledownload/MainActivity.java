@@ -2,16 +2,23 @@ package com.luisalonso.androidfiledownload;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.luisalonso.androidfiledownload.io.ApiConstants;
 import com.luisalonso.androidfiledownload.io.FileDownload;
 
 import com.luisalonso.androidfiledownload.util.FileUtil;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 
 import okhttp3.ResponseBody;
@@ -28,13 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.mediabyte.driveintegrationtesting.R.layout.activity_main);
+        setContentView(com.luisalonso.androidfiledownload.R.layout.activity_main);
         setupView();
         setupListeners();
     }
 
     private void setupView() {
-        mDownloadButton = (Button) findViewById(com.mediabyte.driveintegrationtesting.R.id.download);
+        mDownloadButton = (Button) findViewById(com.luisalonso.androidfiledownload.R.id.download);
     }
 
     private void setupListeners() {
